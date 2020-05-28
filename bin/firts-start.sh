@@ -1,4 +1,5 @@
 #!/bin/bash
 docker-compose exec app composer install
+<<<<<<< HEAD
 docker-compose exec app chmod 777 ./web/assets -R
 docker-compose exec app chmod 777 ./runtime -R
