@@ -1,0 +1,1 @@
+sudo bin/yii.sh migrate/create create_junction_table_for_usuario_and_permiso_tables
