@@ -54,7 +54,7 @@ $config = [
                 'rules' => [
                     'class' => 'yii\rest\UrlRule',
                     'pluralize' => false,
-                    'controller' => 'apiv1/usuario'
+                    'controller' => ['apiv1/usuario','apiv1/usuariopermiso','apiv1/permiso'],
                 ],
             ],
         ],
@@ -75,6 +75,7 @@ if (YII_ENV_DEV) {
             'class' => 'yii\debug\Module',
             // uncomment the following to add your IP if you are not connecting from localhost.
             //'allowedIPs' => ['127.0.0.1', '::1'],
+            'allowedIPs' => [ ($_ENV['PRODUCCION'] ? '127.0.0.1' : '*')],
         ];
         $config['bootstrap'][] = 'gii';
         $config['modules']['gii'] = [

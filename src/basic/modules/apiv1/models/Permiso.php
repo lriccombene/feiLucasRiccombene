@@ -2,12 +2,12 @@
 
 namespace app\modules\apiv1\models;
 
-class Usuario extends \app\models\Usuario
+class Permiso extends \app\models\Permiso
 {
     public function fields (){
-        return ['id', 'nombre','apellido'];
+        return [  'id','descripcion'];
     }
     public function extraFields(){
-        return ['permiso' ]; 
+        return ['istaff' ]; 
     }
 }

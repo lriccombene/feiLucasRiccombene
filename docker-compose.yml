@@ -34,8 +34,8 @@ services:
       PHP_USER_ID: 1000
       PRODUCCION: 0
       PHP_ENABLE_XDEBUG: 1
-      X_DEBUG_CONFIG: remote_host=172.23.0.1 remote_port=9005
-      #X_DEBUG_CONFIG: remote_connect_back=1 remote_port=9005
+      #X_DEBUG_CONFIG: remote_host=172.23.0.1 remote_port=9005
+      X_DEBUG_CONFIG: remote_connect_back=1 remote_port=9005
 
     ports:
       - 8000:80
