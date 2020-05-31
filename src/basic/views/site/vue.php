@@ -3,20 +3,28 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\web\View;
 
 $this->title = 'Vue';
 $this->params['breadcrumbs'][] = $this->title;
+
+$this->registerJsFile(
+    "https://cdn.jsdelivr.net/npm/vue/dist/vue.js",
+    ['position'=> View::POS_HEAD ]
+);
+
 ?>
-
-
-
-
 <div class="site-vue">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div id="app">
+    {{ message }}
+    </div>
 
-    <p>
-        This is the Vue page.
-    </p>
-
-    <code><?= __FILE__ ?></code>
+    <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Primer pagina en Vue!'
+        }
+    })
+    </script>
 </div>
