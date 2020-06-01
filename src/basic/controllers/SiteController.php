@@ -127,7 +127,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays about page.
+     * Displays vue page.
      *
      * @return string
      */
@@ -135,5 +135,6 @@ class SiteController extends Controller
     {
         return $this->render('vue');
     }
+
 
 }
